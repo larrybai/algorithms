@@ -52,5 +52,6 @@ typedef struct bintree {
 BinTree *binTreeCreate();
 TreeNode *binTreeAddNode(BinTree *, void *);
 void binTreeInOrderTraverse(BinTree *, TreeNode *);
+void binTreeVisitKthNode(BinTree *, TreeNode *, int);
 
 #endif

@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	binTreeAddNode(tree, &val2);
 	binTreeAddNode(tree, &val3);
 	binTreeInOrderTraverse(tree, tree->root);
+	binTreeVisitKthNode(tree, tree->root, 3);
 
 	return 0;
 }

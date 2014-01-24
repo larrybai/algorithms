@@ -55,3 +55,15 @@ void binTreeInOrderTraverse(BinTree *tree, TreeNode *node)
 	nodeVisit(tree, node);
 	binTreeInOrderTraverse(tree, node->rchild);
 }
+
+static int count = 0;
+void binTreeVisitKthNode(BinTree *tree, TreeNode *node, int k)
+{
+	if (node == NULL)
+		return;
+	binTreeVisitKthNode(tree, node->rchild, k);
+	count++;
+	if (count == k)
+		nodeVisit(tree, node);
+	binTreeVisitKthNode(tree, node->lchild, k);
+}
